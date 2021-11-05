@@ -3,13 +3,13 @@
 MODULE_AUTHOR("Injae Kang <abcinje@gmail.com>");
 MODULE_LICENSE("GPL");
 
-static int hello_init(void)
+static int __init hello_init(void)
 {
 	printk(KERN_ALERT "Hello, world!\n");
 	return 0;
 }
 
-static void hello_exit(void)
+static void __exit hello_exit(void)
 {
 	printk(KERN_ALERT "Goodbye!\n");
 }
